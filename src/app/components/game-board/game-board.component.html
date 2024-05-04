@@ -1,0 +1,7 @@
+<div class="chessboard">
+    <div *ngFor="let row of rows" class="row">
+        <div *ngFor="let square of row" (click)="fire(row,square)" class="square" [ngClass]="{'dark': square.isDark}">
+            {{ square.position }}
+        </div>
+    </div>
+</div>
